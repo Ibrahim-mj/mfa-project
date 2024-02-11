@@ -22,17 +22,26 @@ This is a Django project that implements custom user authentication using email 
     ```bash
     pip install -r requirements.txt
     ```
-3. Run the migrations:
+3. Create a `.env` file in the root directory and add the following environment variables:
+    ```env
+    SECRET_KEY=your_secret_key
+    DEBUG=True
+    ALLOWED_HOSTS=[]
+    DATABASE_URL=sqlite:///db.sqlite3
+    EMAIL_HOST_USER=your_email
+    EMAIL_HOST_PASSWORD=your_email_password
+    ```
+    Set up your email host and password for sending OTP to users, and your SMTP server. Do not forget to generate a new secret key. You can use [Djecrety](https://djecrety.ir/) to generate a new secret key.
+4. Run the migrations:
     ```bash
     python manage.py migrate
     ```
-4. Create a superuser:
+5. Create a superuser:
     ```bash
     python manage.py createsuperuser
     ```
-5. Run the server:
-    ```bash
+6. Run the server:
     python manage.py runserver 8000
     ```
-6. Open the browser and go to `http://127.0.0.1:8000/`
-7. The api documentation is available at `http://127.0.0.1:8000/api/schema/swagger-ui/`
+7. Open the browser and go to `http://127.0.0.1:8000/`
+8. The api documentation is available at `http://127.0.0.1:8000/api/schema/swagger-ui/`
