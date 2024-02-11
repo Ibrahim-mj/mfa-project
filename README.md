@@ -31,7 +31,8 @@ This is a Django project that implements custom user authentication using email 
     EMAIL_HOST_USER=your_email
     EMAIL_HOST_PASSWORD=your_email_password
     ```
-    Set up your email host and password for sending OTP to users, and your SMTP server. Do not forget to generate a new secret key. You can use [Djecrety](https://djecrety.ir/) to generate a new secret key.
+    Set up your email host and password for sending OTP to users, and your SMTP server. You can use [Debug Mail](https://debugmail.io/) to test the email sending functionality.
+    Do not forget to generate a new secret key. You can use [Djecrety](https://djecrety.ir/) to generate a new secret key.
 4. Run the migrations:
     ```bash
     python manage.py migrate
